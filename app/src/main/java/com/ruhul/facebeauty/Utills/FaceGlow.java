@@ -16,6 +16,7 @@ import android.graphics.RadialGradient;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Shader;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -29,6 +30,9 @@ public class FaceGlow {
     public Bitmap drawFace(Bitmap bitmap, Face face, int color, int alpha) {
         Bitmap tempBitmap = null;
         try {
+
+            Log.d("FaceGlow","FaceGlow");
+
             tempBitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.RGB_565);
             Canvas canvas = new Canvas(tempBitmap);
             canvas.drawBitmap(bitmap, 0f, 0f, null);

@@ -23,6 +23,7 @@ public class MainToolAdapter extends RecyclerView.Adapter<MainToolAdapter.ViewHo
         toolItemSelected = selected;
         toolList.add(new ToolModel("Lips Beauty", ToolType.LIPS_BEAUTY, R.drawable.ic_lips_outer));
         toolList.add(new ToolModel("Face Glow", ToolType.FACE_GLOW, R.drawable.ic_face));
+        toolList.add(new ToolModel("Face mask", ToolType.FACE_MASK, R.drawable.ic_baseline_masks_24));
     }
 
     public interface OnToolItemSelected {

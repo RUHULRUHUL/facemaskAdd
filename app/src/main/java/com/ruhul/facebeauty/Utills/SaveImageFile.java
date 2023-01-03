@@ -58,26 +58,6 @@ public class SaveImageFile {
             fullPath = root + "/DCIM/" + getAppName() + "/" + fname;
             Snackbar.make(rootLayout, "Saved Image in " + fullPath, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//                final Intent scanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-//                final Uri contentUri = Uri.parse(fullPath);
-//                scanIntent.setData(contentUri);
-//                context.sendBroadcast(scanIntent);
-//            } else {
-//                final Intent intent = new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://" + fullPath));
-//                context.sendBroadcast(intent);
-//            }
-            //            context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED,
-//                    Uri.parse("file://" + Environment.getExternalStorageDirectory())));
-            /* new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(ACTION_VIEW);
-                            Uri uri = Uri.parse("file://" + fullPath);
-                            intent.setDataAndType(uri, "image/*");
-                            context.startActivity(intent);
-                        }
-            * */
 
         } catch (Exception e) {
             Log.d("EXEX",e.getMessage());

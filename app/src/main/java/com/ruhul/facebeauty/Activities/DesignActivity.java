@@ -235,13 +235,6 @@ public class DesignActivity extends AppCompatActivity implements MainToolAdapter
                 onRedoPress();
                 break;
             }
-
-//            case R.id.designmenu_helpfeedback:
-//                startActivity(new Intent(DesignActivity.this, HelpFeedBackActivity.class));
-//                break;
-//            case R.id.designmenu_settings:
-//                startActivity(new Intent(DesignActivity.this, SettingsActivity.class));
-//                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -356,10 +349,10 @@ public class DesignActivity extends AppCompatActivity implements MainToolAdapter
             txtColor.setVisibility(View.GONE);
             tempColor = Color.WHITE;
             alphaSeekBar.setProgress(15);
-            tempAlpha =15;
-        }else if (toolType == ToolType.LIPS_BEAUTY){
+            tempAlpha = 15;
+        } else if (toolType == ToolType.LIPS_BEAUTY) {
             alphaSeekBar.setProgress(80);
-            tempAlpha =80;
+            tempAlpha = 80;
         }
         colorPickerSeekbar.init();
         txtColor.setText("Selected Color");
@@ -409,6 +402,8 @@ public class DesignActivity extends AppCompatActivity implements MainToolAdapter
                 dialog.dismiss();
             }
         });
+
+
         Objects.requireNonNull(correctBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -422,7 +417,13 @@ public class DesignActivity extends AppCompatActivity implements MainToolAdapter
                         FaceGlow glow = new FaceGlow();
                         newTempBitmap = glow.drawFace(newTempBitmap, mainFaceList.get(0), tempColor, tempAlpha);
                         bitmapList.add(newTempBitmap);
-                        break;
+
+/*                    case FACE_MASK:
+                        FaceGlow faceMask = new FaceGlow();
+                        newTempBitmap = faceMask.createMask()
+                        bitmapList.add(newTempBitmap);
+                        break;*/
+
                 }
                 mainImageView.setImageDrawable(new BitmapDrawable(getResources(), newTempBitmap));
                 dialog.dismiss();

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ruhul.facebeauty">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-<!--    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />-->
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
 
     <application
         android:allowBackup="true"
@@ -20,13 +25,6 @@
         <activity android:name="com.ruhul.facebeauty.Activities.HelpFeedBackActivity" />
         <activity android:name="com.ruhul.facebeauty.Activities.SettingsActivity" />
         <activity android:name="com.ruhul.facebeauty.Activities.DesignActivity">
-
-            <!-- <meta-data -->
-            <!-- android:name="android.support.PARENT_ACTIVITY" -->
-            <!-- android:value=".Activities.SettingsActivity" /> -->
-            <!-- <meta-data -->
-            <!-- android:name="android.support.PARENT_ACTIVITY" -->
-            <!-- android:value=".Activities.HelpFeedBackActivity" /> -->
 
         </activity>
 
